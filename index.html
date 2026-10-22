@@ -412,6 +412,54 @@ const QUESTIONS = [
    "Nghiên cứu mất quá nhiều năm để hoàn thành, khiến số liệu bị lạc hậu"
   ],
   "a": 0
+ },
+ {
+  "ctx": "Phục hồi dịch vụ",
+  "q": "Mục tiêu chính của phục hồi dịch vụ (Service Recovery) là gì?",
+  "o": [
+   "Giảm chi phí vận hành cho doanh nghiệp",
+   "Biến trải nghiệm tiêu cực của khách hàng thành trải nghiệm tích cực và khôi phục lòng tin",
+   "Tăng số lượng nhân viên tại mỗi điểm tiếp xúc dịch vụ",
+   "Đền bù tài chính cho mọi khách hàng không hài lòng"
+  ],
+  "a": 1,
+  "e": "Phục hồi dịch vụ nhằm chuyển hóa sự không hài lòng thành sự hài lòng, từ đó duy trì lòng trung thành của khách hàng."
+ },
+ {
+  "ctx": "Tương tác khách hàng",
+  "q": "Trong giao tiếp dịch vụ, điều nào sau đây được coi là cách tiếp cận KHÔNG phù hợp khi khách hàng phàn nàn?",
+  "o": [
+   "Lắng nghe chăm chú và ghi nhận cảm xúc của khách",
+   "Xin lỗi chân thành ngay cả khi lỗi không hoàn toàn thuộc về nhân viên",
+   "Tranh luận với khách hàng để bảo vệ chính sách của công ty",
+   "Đề xuất giải pháp khắc phục và theo dõi kết quả sau đó"
+  ],
+  "a": 2,
+  "e": "Tranh luận với khách hàng sẽ làm leo thang xung đột và tổn hại mối quan hệ; nhân viên cần giữ bình tĩnh, lắng nghe và tìm giải pháp."
+ },
+ {
+  "ctx": "Lý thuyết Công bằng",
+  "q": "Công bằng về tương tác (Interactional Justice) trong dịch vụ thể hiện ở yếu tố nào sau đây?",
+  "o": [
+   "Khách hàng nhận được khoản bồi hoàn tài chính xứng đáng",
+   "Quy trình giải quyết khiếu nại được thực hiện minh bạch và nhất quán",
+   "Nhân viên đối xử tôn trọng, lịch sự và cung cấp thông tin đầy đủ cho khách hàng",
+   "Thời gian chờ đợi của khách hàng được rút ngắn tối đa"
+  ],
+  "a": 2,
+  "e": "Interactional Justice đề cập đến cách nhân viên đối xử với khách hàng trong quá trình tương tác: tôn trọng, trung thực và cung cấp giải thích rõ ràng."
+ },
+ {
+  "ctx": "Chiến lược dịch vụ",
+  "q": "Tại sao việc đặt nhân viên túc trực tại khu vực sân băng (chứ không chỉ ở quầy lễ tân) lại được khuyến nghị trong nghiên cứu này?",
+  "o": [
+   "Để giám sát và ngăn chặn khách hàng trượt quá nhanh",
+   "Để rút ngắn thời gian phản hồi và xử lý sự cố tại chỗ, nâng cao trải nghiệm khách hàng",
+   "Để tăng doanh thu bán hàng tại sân",
+   "Để thay thế hệ thống camera giám sát"
+  ],
+  "a": 1,
+  "e": "Nhân viên hiện diện trực tiếp tại sân băng giúp phát hiện và xử lý sự cố nhanh hơn, giảm thiểu tác động tiêu cực đến trải nghiệm khách hàng."
  }
 ];
 
@@ -465,11 +513,11 @@ function figure(o){
   </g></svg>`;
 }
 const CAST = [
-  { /* áo đen */ shirt:'#1d1d22', pants:'#1d1d22', watch:true,
-    hairTop:'<path d="M24 37C19 9 38 5 50 5s31 4 26 32c-3-9-6-15-12-17-8 4-20 4-28 0-6 2-9 8-12 17z" fill="#1c1c22"/>' },
-  { /* tóc vàng, áo xám */ shirt:'#a9adb5', pants:'#e2d6b8',
+  { /* áo đen - tóc nam layer */ shirt:'#1d1d22', pants:'#1d1d22', watch:true,
+    hairTop:'<path d="M24 37C19 9 38 5 50 5s31 4 26 32c-3-9-6-15-12-17-8 4-20 4-28 0-6 2-9 8-12 17z" fill="#1c1c22"/><path d="M26 30 Q34 22 50 24 Q66 22 74 30" stroke="#1c1c22" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M22 37 Q30 28 50 30 Q70 28 78 37" stroke="#2a2a30" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M23 34 Q28 26 45 27" stroke="#38383f" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M77 34 Q72 26 55 27" stroke="#38383f" stroke-width="3" fill="none" stroke-linecap="round"/>' },
+  { /* tóc vàng layer, áo xám */ shirt:'#a9adb5', pants:'#e2d6b8',
     torso:'<path d="M45 70l5 8 5-8" stroke="#fff" stroke-width="1.8" fill="none" opacity=".8"/>',
-    hairTop:'<path d="M24 39C17 10 38 4 52 5s27 6 24 34c-2-11-8-17-16-19-10 6-23 6-31 2-4 4-6 11-6 17z" fill="#dcc16b"/><path d="M40 10q10-4 20 0" stroke="#f1dd94" stroke-width="3" fill="none" stroke-linecap="round"/>' },
+    hairTop:'<path d="M24 39C17 10 38 4 52 5s27 6 24 34c-2-11-8-17-16-19-10 6-23 6-31 2-4 4-6 11-6 17z" fill="#dcc16b"/><path d="M26 32 Q34 24 50 26 Q66 24 74 32" stroke="#dcc16b" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M22 38 Q30 29 50 31 Q70 29 78 38" stroke="#c9ab52" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M23 35 Q29 27 46 28" stroke="#f1dd94" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M77 35 Q71 27 54 28" stroke="#f1dd94" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M40 10q10-4 20 0" stroke="#f1dd94" stroke-width="3" fill="none" stroke-linecap="round"/>' },
   { /* tóc dài, kính, gấu hồng */ shirt:'#a9d3dc', pants:'#efe3c8', long:true, rl:10, rr:28,
     hairSide:'<rect x="22" y="30" width="13" height="58" rx="6.5" fill="#17151a"/><rect x="65" y="30" width="13" height="58" rx="6.5" fill="#17151a"/>',
     hairTop:'<path d="M23 40C18 4 82 4 77 40c-4-14-12-22-27-22S27 26 23 40z" fill="#17151a"/>',
